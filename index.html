@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+    <title>testResponsiveImages</title>
+    <meta name="description" content="">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <script src="assets/js/modernizr.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+<body>
+
+    <!-- /////////////////////////////////////////////////////////////// -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1>testResponsiveImages</h1>
+            <p>Yeah yeah</p>
+        </div>
+    </div>
+
+    <!-- /////////////////////////////////////////////////////////////// -->
+    <div class="container">
+        <h2>device-pixel-ratio</h2>
+        <p>Device pixel ration detection. Usefull to display retina / non retnina images.</p>
+        <p class="well">
+            <code>
+                &lt;img srcset="assets/img/1-medium.jpg 1x, assets/img/1-large.jpg 2x" src="assets/img/1-medium.jpg" alt="This guy is cool"/&gt;
+            </code>
+        </p>
+        <div class="fluid">
+            <img srcset="assets/img/1-medium.jpg 1x, assets/img/1-large.jpg 2x" src="assets/img/1-medium.jpg" alt="This guy is cool"/>
+        </div>
+    </div>
+
+    <!-- /////////////////////////////////////////////////////////////// -->
+    <div class="container">
+        <h2>Fluid images</h2>
+        <p>They key is helping the browser understand the layout. Each image of the set is defined with its size. And the set is defined with its sizes.</p>
+        <code>
+            &lt;img srcset="image1 image1Size, image2 image2Size, etc..." sizes="[media query] [length], [media query] [length], etc... [default length]"/&gt;
+        </code>
+        <p>The image size is in <code>w</code> (witch is equivalent to <code>px</code>)</p>
+        <p>Sizes are defined in <code>px,em or vw</code>
+
+        <h3>Simple</h3>
+        <p class="well">
+            <code>
+                &lt;img srcset="assets/img/1-large.jpg 800w, assets/img/1-medium.jpg 600w" sizes="100vw" src="assets/img/1-medium.jpg" alt="This guy is cool"/&gt;
+            </code>
+        </p>
+        <div class="fluid">
+            <img srcset="assets/img/1-large.jpg 800w, assets/img/1-medium.jpg 600w" sizes="100vw" src="assets/img/1-medium.jpg" alt="This guy is cool"/>
+        </div>
+
+        <h3>With break points</h3>
+        <p class="well">
+            <code>
+                &lt;img srcset="assets/img/1-large.jpg 806w, assets/img/1-medium.jpg 603w" sizes="(min-width:1000px) 20vw, 100vw" src="assets/img/1-medium.jpg" alt="This guy is cool"/&gt;
+            </code>
+        </p>
+        <div class="row">
+            <div class="col-md-3 fluid"><img srcset="assets/img/1-large.jpg 806w, assets/img/1-medium.jpg 603w" sizes="(min-width:1000px) 20vw, 100vw" src="assets/img/1-medium.jpg" alt="This guy is cool"/></div>
+            <div class="col-md-3 fluid"><img srcset="assets/img/1-large.jpg 806w, assets/img/1-medium.jpg 603w" sizes="(min-width:1000px) 20vw, 100vw" src="assets/img/1-medium.jpg" alt="This guy is cool"/></div>
+            <div class="col-md-3 fluid"><img srcset="assets/img/1-large.jpg 806w, assets/img/1-medium.jpg 603w" sizes="(min-width:1000px) 20vw, 100vw" src="assets/img/1-medium.jpg" alt="This guy is cool"/></div>
+            <div class="col-md-3 fluid"><img srcset="assets/img/1-large.jpg 806w, assets/img/1-medium.jpg 603w" sizes="(min-width:1000px) 20vw, 100vw" src="assets/img/1-medium.jpg" alt="This guy is cool"/></div>
+        </div>
+    </div>
+
+    <!-- /////////////////////////////////////////////////////////////// -->
+    <div class="container">
+        <h2>Support</h2>
+        This <a href="http://scottjehl.github.io/picturefill/" target="_new">polyfill</a> does a great job.
+    </div>
+
+    <!-- /////////////////////////////////////////////////////////////// -->
+    <div class="container">
+        <hr>
+        <footer>
+            <p>&copy; testResponsiveImages</p>
+        </footer>
+    </div>
+
+</div>
+
+<!-- /////////////////////////////////////////////////////////////// -->
+<script data-main="assets/js/scripts.min" src="assets/js/require.js"></script>
+
+</body>
+</html>

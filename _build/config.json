@@ -1,0 +1,21 @@
+{
+  "host":"localhost",
+  "baseURL":"testResponsiveImages",
+  "homeURL": "http://localhost/testResponsiveImages",
+  "sassDir":"../_dev/scss",
+  "jsDevDir": "../_dev/js",
+  "jsMainFile": "../_dev/js/main.js",
+  "jsMainName": "main",
+  "jsMinFile": "../assets/js/scripts.min.js",
+  "cssDir":"../assets/css",
+  "imgDir": "../assets/img",
+  "fontsDir": "../assets/fonts",
+  "jsDir": "../assets/js",
+  "cleanFiles":["node_modules", ".sass-cache", "../_dev/js/libs/vendor"],
+  "copyFiles":{
+    "../_dev/js/libs/vendor/components-font-awesome/fonts/*":"../assets/fonts/",
+    "../_dev/js/libs/vendor/modernizr/modernizr.js":"../assets/js/",
+    "../_dev/js/libs/vendor/requirejs/require.js":"../assets/js/",
+    "../_dev/js/libs/vendor/respond/dest/respond.min.js":"../assets/js/"
+  }
+}
