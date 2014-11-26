@@ -4,6 +4,7 @@ testResponsiveImages
 Features
 --------
 - Simple tests of responsive images with `srcset`
+- Polyfills
 - [Smashing article](http://www.smashingmagazine.com/2014/05/14/responsive-images-done-right-guide-picture-srcset)
 - [AlistAppart article](http://alistapart.com/article/responsive-images-in-practice)
 

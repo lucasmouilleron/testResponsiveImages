@@ -12,7 +12,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.png">
-    <script src="assets/js/modernizr.js"></script>
     <link rel="stylesheet" href="assets/css/main.css">
 
 </head>
@@ -48,7 +47,7 @@
             &lt;img srcset="image1 image1Size, image2 image2Size, etc..." sizes="[media query] [length], [media query] [length], etc... [default length]"/&gt;
         </code>
         <p>The image size is in <code>w</code> (witch is equivalent to <code>px</code>)</p>
-        <p>Sizes are defined in <code>px,em or vw</code>
+        <p>Sizes are defined in <code>px,em or vw</code></p>
 
         <h3>Simple</h3>
         <p class="well">
@@ -76,8 +75,25 @@
 
     <!-- /////////////////////////////////////////////////////////////// -->
     <div class="container">
-        <h2>Support</h2>
+        <h2>Support and polyfills</h2>
+        <h3>Polyfill 1 : PictureFill</h3>
         This <a href="http://scottjehl.github.io/picturefill/" target="_new">polyfill</a> does a great job.
+
+        <h3>Polyfill 2 : dense.js</h3>
+        <p>Method 1 : manually specify the n ratio file</p>
+        <p class="well">
+            <code>
+                &lt;img src="assets/img/2-normal.jpg" data-2x="assets/img/2-normal_2x.jpg" alt="This guy is cool"/&gt;
+            </code>
+        </p>
+        <p><img src="assets/img/2-normal.jpg" data-2x="assets/img/2-normal_2x.jpg" alt="This guy is cool"/></p>
+        <p>Method 2 : automatically look for {imageName}_{ratio}x.{ext}</p>
+        <p class="well">
+            <code>
+                &lt;img src="assets/img/2-normal.jpg" alt="This guy is cool"/&gt;
+            </code>
+        </p>
+        <p><img src="assets/img/2-normal.jpg" alt="This guy is cool"/></p>
     </div>
 
     <!-- /////////////////////////////////////////////////////////////// -->

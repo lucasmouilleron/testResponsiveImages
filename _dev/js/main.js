@@ -8,22 +8,20 @@ require.config({
         "console": "libs/vendor/console/console.min",
         "throbber": "libs/vendor/throbber.js/throbber",
         "picturefill": "libs/vendor/picturefill/dist/picturefill",
-        "tools": "libs/tools"
+        "dense":"libs/vendor/dense/src/dense"
     },
     shim: {
         "bootstrap": ["jquery"],
-        "throbber": ["jquery"],
-        "tools": ["jquery", "console"]
+        "dense": ["jquery"]
     }
 });
 
 /////////////////////////////////////////////////////////////////////
 // ENTRY POINT
 /////////////////////////////////////////////////////////////////////
-require(["jquery", "tools", "bootstrap","picturefill"], function($, tools) {
+require(["jquery","bootstrap","picturefill","dense"], function($, tools) {
     $(function() {
-        //tools.displayMainLoader();
-        //setTimeout(function(){tools.hideMainLoader()}, 2000);
-        c("ok");
+        $(".retina img").dense({glue:"_"});
+        console.log("ok");
     });
 });
